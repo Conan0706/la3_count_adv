@@ -8,10 +8,14 @@ body{
     margin: auto;
     /* 全体の余白 */
     padding: 10px;
+    
+    background: #00b5de;
 }
 
 /* 数字 */
-h1{
+.normal{
+    color: #edda15;
+    
     margin: auto;
     
     /* 文字の太さ */
@@ -27,17 +31,43 @@ h1{
     height: 100px;
     line-height: 100px;
     
-    /* 枠の太さ 線の種類 色 */
-    border: 1px solid #009688;
-    
     /* 枠を丸くする */
     border-radius: 50%;
+    
+    /* 枠の太さ 線の種類 色 */
+    border: 2px solid #d8d8d8;
+    
 }
 
+.three{
+     /*枠の太さ 線の種類 色 */
+    border: 2px solid #f8b516;
+    
+    color: #d01026;
+}
+
+.inc_three{
+    border: 2px solid #f8b516;
+}
+
+.inc_three_five{
+    color: #ec6c1f;
+    border: 2px solid #f8b516;
+}
+
+.five{
+    color: #ec6c1f;
+}
+
+.fifteen{
+    color: #2a6d39;
+    border: 2px solid #f8b516;
+    
+}
 /* ボタン共通 */
 input{
     border: 0;
-    background: none;
+    background-color: none;
     display: block;
     margin: auto;
     
@@ -55,14 +85,29 @@ input{
 input[value="+"]{
     
     /* 文字の色 */
-    color: #f9f9f9;
+    color: #d8d8d8;
     
     /* 背景 */
-    background: #448AFF;
+    background: #e94c4d;
 }
 
 /* マイナスボタン */
 input[value="-"]{
-    color: #f9f9f9;
-    background: #F44336;
+    color: #d8d8d8;
+    background: #c2ca2e;
+}
+
+input[value="clear"]{
+    color: #d8d8d8;
+    background: #f8b516;
+}
+
+.counter{
+    margin: 20px;
+}
+
+.number{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #000;
 }

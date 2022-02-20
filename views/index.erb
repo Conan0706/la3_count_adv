@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="/assets/css/count.css">
   </head>
   <body>
-    <h1><%= @number %></h1>
-    <form action="/plus" method="post">
-      <input type="submit" value="+">
+    <form action="/counter" method="post" class="counter">
+          <input type="submit" value="counter">
     </form>
-    <form action="/minus" method="post">
-      <input type="submit" value="-">
-    </form>
+    <% @count.each do |count| %>
+        <div class="number">
+          <h1 class="normal <% if (count.number % 5==0 && count.number % 3 == 0 && count.number != 0) %>fifteen<% elsif (count.number % 3==0 && count.number !=0) %>three<% elsif (count.number.to_s.include?("3") && count.number % 5 == 0) %>inc_three_five
+          <% elsif (count.number % 5==0 && count.number != 0) %>five<% elsif (count.number.to_s.include?("3")) %>inc_three<% end %>"><%= count.number %></h1>
+          <form action="/<%= count.id %>/plus" method="post">
+            <input type="submit" value="+">
+          </form>
+          <form action="/<%= count.id %>/minus" method="post">
+            <input type="submit" value="-">
+          </form>
+          <form action="/<%= count.id %>/clear" method="post">
+            <input type="submit" value="clear">
+          </form>
+        </div>
+    <% end %>
   </body>
 </html>
